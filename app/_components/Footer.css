@@ -1,0 +1,149 @@
+.footer {
+    background-color: #F8EAD8;
+    color: #ffffff;
+    padding: 2rem 10rem;
+    font-family: 'Arial', sans-serif;
+    position: static;
+    bottom: 0;
+    width: 98.9vw;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 0;
+    min-width: 200px;
+    color: #6A4A23;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section p,
+  .footer-section li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .footer-section a {
+    color: #6A4A23;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+
+  .payment-icons {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .payment-icons img {
+    width: 100px;
+    margin-right: 0.5rem;
+    padding-bottom: 10px ;
+  }
+
+  .location-input {
+    padding: 0.5rem;
+    width: calc(100% - 10px);
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-locate {
+    background-color: #f4a261;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-locate:hover {
+    background-color: #e76f51;
+  }
+  
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .quick-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .icons{
+   display: flex; 
+    /* justify-content: center;  */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: -1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #6A4A23;
+  }
+  
+
+
+  @media (max-width: 1000px) {
+.footer{
+  padding: 1rem 3rem;
+  width: 100vw;
+}
+
+    .footer-container {
+        flex-direction: column; /* Stack the sections vertically */
+        gap: 1.5rem; /* Adjust gap between sections */
+        align-items: center; /* Center the content */
+    }
+
+    .footer-section {
+        min-width: 100%; /* Make each section take full width */
+        text-align: center; /* Center text for each section */
+    }
+
+    .payment-icons {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    .payment-icons img {
+        width: 80px; /* Reduce size of payment icons */
+        margin-right: 0.5rem;
+    }
+
+    .location-input {
+        width: 100%; /* Make location input take full width */
+    }
+
+    .footer-bottom {
+      padding-top: 15px;
+        font-size: 01rem; /* Adjust font size for smaller screens */
+    }
+
+    .icons{
+      display: flex;
+      justify-content: center;
+    }
+
+    .quick-links ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+}

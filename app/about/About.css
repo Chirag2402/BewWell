@@ -1,0 +1,111 @@
+.about{
+    padding-top: 190px;
+    padding-bottom: 10px;
+}
+
+.store-info {
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
+    background-color: #fefdfa; /* Light beige background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .store-info h1 {
+    font-size: 2.5rem;
+    color: #6a4e23; /* Deep brown for headings */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .store-info .intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4e3821; /* Slightly darker brown */
+    margin-bottom: 30px;
+  }
+  
+  .store-info .address {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4e3821; /* Matching text color */
+    margin-bottom: 20px;
+  }
+  
+  .store-info .address strong {
+    color: #a0522d; /* Rusty brown for emphasis */
+  }
+  
+  .store-info .store-description {
+    font-size: 1.1rem;
+    color: #7f5a3b; /* Medium brown for body text */
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  .store-info .products-heading {
+    font-size: 1.5rem;
+    color: #8b5e3c; /* Warm brown for product heading */
+    margin-bottom: 10px;
+  }
+  
+  .store-info .products-description {
+    font-size: 1.1rem;
+    color: #7f5a3b; /* Medium brown for descriptions */
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .store-info .product-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #6a4e23; /* Deep brown for list items */
+    margin-bottom: 30px;
+  }
+  
+  .store-info .product-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .store-info .final-note {
+    font-size: 1.1rem;
+    color: #4e3821; /* Consistent brown tone */
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  @media (max-width: 1300px) {
+    .about{
+        padding-top: 130px;
+    }
+    .store-info {
+        padding: 20px; /* Reduce padding on smaller screens */
+        width: 95%; /* Increase width to use more space */
+    }
+
+    .store-info h1 {
+        font-size: 2rem; /* Reduce font size for header */
+    }
+
+    .store-info .intro,
+    .store-info .address,
+    .store-info .store-description,
+    .store-info .products-description,
+    .store-info .final-note {
+        font-size: 1rem; /* Reduce font size for better readability */
+        margin-bottom: 15px; /* Adjust margin for smaller screens */
+    }
+
+    .store-info .products-heading {
+        font-size: 1.3rem; /* Reduce font size for product heading */
+    }
+
+    .store-info .product-list li {
+        font-size: 0.9rem; /* Adjust list item font size */
+    }
+}
