@@ -11,6 +11,11 @@ const nextConfig = {
         hostname: 'be-well-strapi.onrender.com', // Strapi domain
         pathname: '/uploads/**', // Allow images from /uploads
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/dy9arv1g9/**',
+      },
     ],
   },
 };

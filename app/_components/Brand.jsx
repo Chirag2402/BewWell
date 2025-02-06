@@ -9,26 +9,31 @@ function Brand({ brand }) {
 
   return (
     <div className='bg-[#f9f9f9] py-8 rounded-lg'>
-      <h1 className="text-[#6A4A23] text-2xl font-semibold mb-4 flex justify-center">Choose Your Brand</h1>
+      <h1 className="text-[#6A4A23] text-2xl font-semibold mb-4 flex justify-center">
+        Choose Your Brand
+      </h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-4 justify-items-center">
         {displayedBrands.length > 0 ? displayedBrands.map((brandData) => {
           const imageUrl = brandData?.image?.url;
-          const fullImageUrl = imageUrl
-            ? process.env.NEXT_PUBLIC_BACKEND_BASE_URL + imageUrl
-            : '';
+
+          // Ensure imageUrl exists and is not empty before constructing fullImageUrl
+          const fullImageUrl = imageUrl ? `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}${imageUrl}` : null;
+
           return (
-            <div 
-              key={brandData.id} 
-              className="w-full flex justify-center items-center p-2"
-            >
-              <Image 
-                src={fullImageUrl} 
-                width={115} 
-                height={40} 
-                alt={brandData.name}
-                className="object-contain"
-              />
+            <div key={brandData.id} className="w-full flex justify-center items-center p-2">
+              {fullImageUrl ? ( // ✅ Only render <Image> if fullImageUrl is valid
+                <Image 
+                  src={fullImageUrl} 
+                  width={115} 
+                  height={40} 
+                  alt={brandData.name || "Brand Image"} 
+                  className="object-contain"
+                  unoptimized // Optional: Helps if Cloudinary is handling optimization
+                />
+              ) : (
+                <p className="text-gray-500">No Image</p> // Placeholder text when no image is available
+              )}
             </div>
           );
         }) : (
