@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['localhost', 'be-well-strapi.onrender.com'], // Added Render domain
+    domains: ['be-well-strapi.onrender.com'], // Added Render domain
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
     remotePatterns: [
