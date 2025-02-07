@@ -16,23 +16,25 @@ function Brand({ brand }) {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 px-4 justify-items-center">
         {displayedBrands.length > 0 ? displayedBrands.map((brandData) => {
           const imageUrl = brandData?.image?.url;
-
-          // Ensure imageUrl exists and is not empty before constructing fullImageUrl
-          const fullImageUrl = imageUrl ? `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}${imageUrl}` : null;
+          
+          // ✅ Fix: Use image URL directly if it's an absolute URL (Cloudinary), otherwise prepend Strapi URL
+          const fullImageUrl = imageUrl?.startsWith("http") 
+            ? imageUrl 
+            : `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}${imageUrl}`;
 
           return (
             <div key={brandData.id} className="w-full flex justify-center items-center p-2">
-              {fullImageUrl ? ( // ✅ Only render <Image> if fullImageUrl is valid
+              {imageUrl ? (
                 <Image 
                   src={fullImageUrl} 
                   width={115} 
                   height={40} 
                   alt={brandData.name || "Brand Image"} 
                   className="object-contain"
-                  unoptimized // Optional: Helps if Cloudinary is handling optimization
+                  unoptimized // Helps if Cloudinary is handling optimization
                 />
               ) : (
-                <p className="text-gray-500">No Image</p> // Placeholder text when no image is available
+                <p className="text-gray-500">No Image</p>
               )}
             </div>
           );
