@@ -49,7 +49,7 @@ const Header = () => {
       {/* Top Announcement Bar */}
       {!isScrolled && (
         <div className="fixed top-0 z-50 w-full bg-[#F8EAD8] text-center py-1.5 text-sm">
-          Kick the year off with 20% off £50 spend code 'HNY20' T&C's
+          Get 20% off £50+ with code 'HNY20'. T&Cs apply.
         </div>
       )}
 
