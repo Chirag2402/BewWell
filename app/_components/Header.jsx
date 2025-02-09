@@ -134,7 +134,7 @@ const Header = () => {
                     href={`/products-category/${encodeURIComponent(
                       category.name
                     )}`}
-                    className="text-[#6B4226] hover:text-[#bc8f4b] text-xl transition-colors duration-200"
+                    className="text-[#6B4226] hover:text-[#bc8f4b] text-lg transition-colors duration-200"
                   >
                     {category.name}
                   </Link>
