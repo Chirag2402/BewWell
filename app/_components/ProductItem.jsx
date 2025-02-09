@@ -24,7 +24,11 @@ function ProductItem({ product }) {
     hover:scale-105 hover:shadow-md
     transition-all ease-in-out cursor-pointer w-60">
         <Image
-          src={process.env.NEXT_PUBLIC_BACKEND_BASE_URL + product.images?.[0]?.url}
+            src={
+              product.images?.[0]?.url.startsWith("http")
+                ? product.images[0].url
+                : process.env.NEXT_PUBLIC_BACKEND_BASE_URL + product.images[0].url
+            }
           width={150}
           height={100}
           alt={product.name}

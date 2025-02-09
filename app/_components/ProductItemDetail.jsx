@@ -5,7 +5,11 @@ function ProductItemDetail({product}) {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 bg-white text-black'>
       <Image
-      src={process.env.NEXT_PUBLIC_BACKEND_BASE_URL + product.images?.[0]?.url}
+   src={
+    product.images?.[0]?.url.startsWith("http")
+      ? product.images[0].url
+      : process.env.NEXT_PUBLIC_BACKEND_BASE_URL + product.images[0].url
+  }
       width={200}
       height={200}
       alt={product.name}
